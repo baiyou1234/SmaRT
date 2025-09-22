@@ -1,4 +1,4 @@
-# 🧠 SmaRT: Style-Modulated Robust Test-Time Adaptation
+# SmaRT: Style-Modulated Robust Test-Time Adaptation
 
 We propose a test-time adaptation method called **SmaRT (Style-Modulated Robust Test-Time Adaptation)**.  
 This method is designed for **source-free cross-domain brain tumor segmentation** in MRI.  
