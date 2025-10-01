@@ -217,7 +217,7 @@ def train(config,train_loader,test_loader,source_model):
                    
                     for k in range(out.size(0)):
                         input_i = out[k].unsqueeze(0)
-                        loss_dice = criterion(input_i, pesudo_labels.unsqueeze(1)) 
+                        loss_dice = criterion(input_i, torch.argmax(pesudo_labels[k],dim = 1).unsqueeze(1)) 
                         loss_ao = bh_loss(input_i) / 10
                         loss_tu = f_tu(input_i)
                         weighted_loss_i = (loss_ao + loss_tu + loss_dice) * weight[k]
